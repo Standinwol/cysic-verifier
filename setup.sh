@@ -21,7 +21,8 @@ python3 config.py
 
 echo 'Start config docker-compose'
 
-output_file="docker-compose.yml"
+rm -rf docker-compose.yaml
+output_file="docker-compose.yaml"
 
 echo "version: '3'" > $output_file
 echo "services:" >> $output_file
