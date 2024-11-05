@@ -1,0 +1,23 @@
+version: '3'
+services:
+  verifier_instance_1:
+    build: .
+    environment:
+      - CHAIN_ID=534352
+    volumes:
+      - ./data/cysic/keys:/root/.cysic/keys
+      - ./data/scroll_prover:/root/.scroll_prover
+    network_mode: "host"
+    restart: unless-stopped
+    command: ["0xfa98dC932041755636ED44a4E2455C33B2378Ca9"]
+
+  verifier_instance_2:
+    build: .
+    environment:
+      - CHAIN_ID=534352
+    volumes:
+      - ./data/cysic/keys:/root/.cysic/keys
+      - ./data/scroll_prover:/root/.scroll_prover
+    network_mode: "host"
+    restart: unless-stopped
+    command: ["0x9302945b5D0a72dB687FDcE9cbFE56Ea4A978969"]
