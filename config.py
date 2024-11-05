@@ -1,11 +1,22 @@
 import os
+import shutil
 
-# Define the directories and the content template for config.yaml files
-instances = {
-    "verifier_instance_1": "0xfa98dC932041755636ED44a4E2455C33B2378Ca9",
-    "verifier_instance_2": "0x9302945b5D0a72dB687FDcE9cbFE56Ea4A978969"
-}
+# Path to the file containing EVM addresses
+evm_file_path = 'evm.txt'
 
+# Initialize an empty dictionary for instances
+instances = {}
+
+# Read each line in the file and populate the dictionary
+with open(evm_file_path, 'r') as file:
+    for i, line in enumerate(file, start=1):
+        # Remove any extra whitespace or newline characters
+        evm_address = line.strip()
+        
+        # Define the instance name and add it to the dictionary
+        instances[f'verifier_instance_{i}'] = evm_address
+
+# Define the content template for config.yaml files
 config_content_template = """# Not Change
 chain:
   # Not Change
@@ -24,8 +35,7 @@ server:
   cysic_endpoint: "https://api-pre.prover.xyz"
 """
 
-import shutil
-
+# Remove existing directories if they exist
 for instance in instances.keys():
     if os.path.isdir(instance):  # Confirm it's a directory before removing
         shutil.rmtree(instance)
@@ -41,4 +51,5 @@ for instance, address in instances.items():
     
     with open(config_path, "w") as config_file:
         config_file.write(config_content)
-"Config files created successfully."
+
+print("Config files created successfully.")
