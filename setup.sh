@@ -46,3 +46,9 @@ EOL
 done < evm.txt
 
 echo "docker-compose.yml generated with $((i - 1)) instances."
+
+echo "Docker building & start"
+
+docker compose up --build -d
+
+docker compose logs -f
