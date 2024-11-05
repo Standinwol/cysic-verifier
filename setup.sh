@@ -11,7 +11,7 @@ curl -L https://github.com/cysic-labs/phase2_libs/releases/download/v1.0.0/libda
 cd /root/cysic-verifier/
 
 echo 'Type evm wallet addresses'
-
+mkdir data
 nano evm.txt
 
 echo 'Start config file instance docker'
