@@ -20,7 +20,7 @@ with open(evm_file_path, 'r') as file:
 config_content_template = """# Not Change
 chain:
   # Not Change
-  endpoint: "node-pre.prover.xyz:80"
+  endpoint: "grpc-testnet.prover.xyz:80"
   # Not Change
   chain_id: "cysicmint_9001-1"
   # Not Change
@@ -32,7 +32,7 @@ chain:
 
 server:
   # don't modify this
-  cysic_endpoint: "https://api-pre.prover.xyz"
+  cysic_endpoint: "https://api-testnet.prover.xyz"
 """
 
 # Remove existing directories if they exist
