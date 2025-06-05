@@ -9,7 +9,7 @@ services:
       - ./data/scroll_prover:/root/.scroll_prover
     network_mode: "host"
     restart: unless-stopped
-    command: ["0xfa98dC932041755636ED44a4E2455C33B2378Ca9"]
+    command: ["0x..."] # The command to run when the container starts, likely a verifier address.
 
   verifier_instance_2:
     build: .
@@ -20,4 +20,4 @@ services:
       - ./data/scroll_prover:/root/.scroll_prover
     network_mode: "host"
     restart: unless-stopped
-    command: ["0x9302945b5D0a72dB687FDcE9cbFE56Ea4A978969"]
+    command: ["0x..."] # The command to run when the container starts, likely a verifier address.

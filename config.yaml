@@ -9,7 +9,7 @@ chain:
   # Not Change
   gas_price: 10
   # Modify Here：! Your Address (EVM) submitted to claim rewards
-claim_reward_address: "0xf1f25dE35AA64813De757072A8829ac53b480A4B"
+claim_reward_address: "0x..."
 
 server:
   # don't modify this

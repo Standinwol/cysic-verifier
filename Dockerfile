@@ -18,6 +18,7 @@ COPY config.yaml /app/config.yaml
 COPY start.sh /app/start.sh
 COPY verifier /app/verifier
 COPY libdarwin_verifier.so /app/libdarwin_verifier.so
+COPY librsp.so /app/librsp.so
 
 # Ensure the verifier and start.sh are executable
 RUN chmod +x /app/start.sh /app/verifier
