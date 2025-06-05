@@ -40,6 +40,10 @@ while IFS= read -r evm_address || [ -n "$evm_address" ]; do
       - ./data/scroll_prover:/root/.scroll_prover
     network_mode: "host"
     restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
     command: ["$evm_address"]
 
 EOL
