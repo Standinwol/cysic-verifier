@@ -1,7 +1,7 @@
 # Not Change
 chain:
   # Not Change
-  endpoint: "node-pre.prover.xyz:80"
+  endpoint: "grpc-testnet.prover.xyz:80"
   # Not Change
   chain_id: "cysicmint_9001-1"
   # Not Change
@@ -13,4 +13,4 @@ claim_reward_address: "0xf1f25dE35AA64813De757072A8829ac53b480A4B"
 
 server:
   # don't modify this
-  cysic_endpoint: "https://api-pre.prover.xyz"
+  cysic_endpoint: "https://ws-pre.prover.xyz"
