@@ -28,11 +28,11 @@ chain:
   # Not Change
   gas_price: 10
   # Modify Here: Your Address (EVM) submitted to claim rewards
-  claim_reward_address: "{claim_reward_address}"
+claim_reward_address: "{claim_reward_address}"
 
 server:
   # don't modify this
-  cysic_endpoint: "https://api-testnet.prover.xyz"
+  cysic_endpoint: "https://ws-pre.prover.xyz"
 """
 
 # Remove existing directories if they exist
